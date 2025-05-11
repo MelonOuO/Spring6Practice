@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>spring6</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.meroriri</groupId>
+    <artifactId>spring6-002-first</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--  打包方式jar，學習spring，項目web項目，普通的java項目即可      -->
+    <packaging>jar</packaging>
+    <!-- 配置多個倉庫   -->
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    <!-- 依賴   -->
+    <dependencies>
+        <!--  spring context依賴  -->
+        <!--   當你引入spring context 依賴之後，表示將spring的基礎依賴引入了     -->
+        <!-- 如果你想使用spring的jdbc或者其他的tx，那麼還需要再次添加依賴       -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.2.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
